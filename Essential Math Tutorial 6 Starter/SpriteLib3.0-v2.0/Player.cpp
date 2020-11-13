@@ -63,9 +63,9 @@ void Player::InitPlayer(std::string& fileName, std::string& animationJSON, int w
 	//Attack Animations\\
 
 	//AttackLeft
-	m_animController->AddAnimation(animations["AttackLeft"].get<Animation>());
+	//m_animController->AddAnimation(animations["AttackLeft"].get<Animation>());
 	//AttackRight
-	m_animController->AddAnimation(animations["AttackRight"].get<Animation>());
+	//m_animController->AddAnimation(animations["AttackRight"].get<Animation>());
 #ifdef TOPDOWN
 	//AttackUp
 	m_animController->AddAnimation(animations["AttackUp"].get<Animation>());
@@ -169,7 +169,7 @@ void Player::MovementUpdate()
 
 	if (Input::GetKeyDown(Key::Space))
 	{
-		m_moving = false;
+		/*m_moving = false;
 
 		if (m_hasPhysics)
 		{
@@ -177,7 +177,7 @@ void Player::MovementUpdate()
 		}
 
 		m_attacking = true;
-		m_locked = true;
+		m_locked = true;*/
 	}
 }
 
