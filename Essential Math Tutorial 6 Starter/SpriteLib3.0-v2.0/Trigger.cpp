@@ -52,6 +52,11 @@ void Trigger::SetFixtures(int y)
 	fixtures = y;
 }
 
+void Trigger::SetSpriteScale(std::string sprite)
+{
+	spriteScale = sprite;
+}
+
 void Trigger::SetVectorMove(b2Vec2 move)
 {
 	movement = move;

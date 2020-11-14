@@ -8,8 +8,14 @@ RotationTrigger::RotationTrigger()
 void RotationTrigger::OnEnter()
 {
 	Trigger::OnEnter();
-
-	ECS::GetComponent<PhysicsBody>(m_targetEntities[0]).TriggeredRotation(rotation, true);
+	if (!triggered)
+	{
+		for (int i = 0; i < m_targetEntities.size(); i++)
+		{
+			ECS::GetComponent<PhysicsBody>(m_targetEntities[i]).TriggeredRotation(rotation, true);
+			triggered = true;
+		}
+	}
 }
 
 void RotationTrigger::OnExit()

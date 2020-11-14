@@ -309,7 +309,7 @@ void PhysicsPlayground::InitScene(float windowWidth, float windowHeight)
 		tempPhsBody.SetColor(vec4(1.f, 0.f, 1.f, 0.3f));
 	}
 
-	//Setup trigger
+	//Setup destroy trigger
 	{
 		//Creates entity
 		auto entity = ECS::CreateEntity();
@@ -475,7 +475,7 @@ void PhysicsPlayground::InitScene(float windowWidth, float windowHeight)
 
 		tempBody = m_physicsWorld->CreateBody(&tempDef);
 
-		tempPhsBody = PhysicsBody(entity, tempBody, float(tempSpr.GetWidth() - shrinkX), float(tempSpr.GetHeight() - shrinkY), vec2(0.f, 0.f), false, ENVIRONMENT, PLAYER | ENEMY);
+		tempPhsBody = PhysicsBody(entity, tempBody, float(tempSpr.GetWidth() - shrinkX), float(tempSpr.GetHeight() - shrinkY), vec2(0.f, 0.f), false, GROUND, PLAYER | ENEMY);
 		tempPhsBody.SetColor(vec4(0.f, 1.f, 0.f, 0.3f));
 		tempPhsBody.SetRotationAngleDeg(90.f);
 	}
@@ -534,6 +534,7 @@ void PhysicsPlayground::InitScene(float windowWidth, float windowHeight)
 		ECS::GetComponent<Trigger*>(entity)->AddTargetEntity(ball);
 		ECS::GetComponent<Trigger*>(entity)->SetScalar(5.f);
 		ECS::GetComponent<Trigger*>(entity)->SetFixtures(0);
+		ECS::GetComponent<Trigger*>(entity)->SetSpriteScale("BeachBall.png");
 
 
 		auto& tempPhsBody = ECS::GetComponent<PhysicsBody>(entity);

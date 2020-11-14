@@ -19,6 +19,7 @@ public:
 
 	void SetScalar(float x);
 	void SetFixtures(int y);
+	void SetSpriteScale(std::string sprite);
 
 	void SetVectorMove(b2Vec2 move);
 	void TriggeredBodies(PhysicsBody body);
@@ -37,6 +38,7 @@ protected:
 	float scalar = 0;
 	float fixtures = 0;
 	float rotation = 0;
+	std::string spriteScale;
 	std::vector<int> m_targetEntities;
 	std::vector<PhysicsBody> m_bodies;
 	std::vector<int> m_targetX;
