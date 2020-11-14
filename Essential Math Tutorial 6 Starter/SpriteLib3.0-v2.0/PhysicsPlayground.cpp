@@ -48,7 +48,7 @@ void PhysicsPlayground::InitScene(float windowWidth, float windowHeight)
 	}
 
 
-	//Link entity
+	//Clam entity
 	{
 		/*Scene::CreatePhysicsSprite(m_sceneReg, "LinkStandby", 80, 60, 1.f, vec3(0.f, 30.f, 2.f), b2_dynamicBody, 0.f, 0.f, true, true)*/
 
@@ -56,15 +56,21 @@ void PhysicsPlayground::InitScene(float windowWidth, float windowHeight)
 		ECS::SetIsMainPlayer(entity, true);
 
 		//Add components
+		ECS::AttachComponent<Player>(entity);
 		ECS::AttachComponent<Sprite>(entity);
 		ECS::AttachComponent<Transform>(entity);
+		ECS::AttachComponent<AnimationController>(entity);
 		ECS::AttachComponent<PhysicsBody>(entity);
 		ECS::AttachComponent<CanJump>(entity);
 
 		//Sets up the components
-		std::string fileName = "LinkStandby.png";
-		ECS::GetComponent<Sprite>(entity).LoadSprite(fileName, 40, 30);
-		ECS::GetComponent<Sprite>(entity).SetTransparency(1.f);
+		std::string fileName = "ClamSpritesheet.png";
+		std::string animations = "clam.json";
+		//ECS::GetComponent<Sprite>(entity).LoadSprite(fileName, 40, 30);
+		//ECS::GetComponent<Sprite>(entity).SetTransparency(1.f);
+
+		ECS::GetComponent<Player>(entity).InitPlayer(fileName, animations, 30, 30, &ECS::GetComponent<Sprite>(entity),
+			&ECS::GetComponent<AnimationController>(entity), &ECS::GetComponent<Transform>(entity));
 		ECS::GetComponent<Transform>(entity).SetPosition(vec3(0.f, 30.f, 2.f));
 
 		auto& tempSpr = ECS::GetComponent<Sprite>(entity);
@@ -606,7 +612,8 @@ void PhysicsPlayground::InitScene(float windowWidth, float windowHeight)
 
 void PhysicsPlayground::Update()
 {
-	
+	auto& player = ECS::GetComponent<Player>(MainEntities::MainPlayer());
+	player.Update();
 }
 
 
