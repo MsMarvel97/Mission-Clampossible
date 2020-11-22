@@ -2,6 +2,7 @@
 #define __ECS_H__
 
 #include <entt/entity/registry.hpp>
+#include <vector>
 
 #include "Transform.h"
 #include "Camera.h"
@@ -10,12 +11,21 @@
 #include "PhysicsBody.h"
 #include "VerticalScroll.h"
 #include "MainEntities.h"
+#include "OtherEntities.h"
 #include "DestroyTrigger.h"
 #include "TranslateTrigger.h"
+#include "MoveTrigger.h"
+#include "MoveTriggerOneWay.h"
 #include "ResizeTrigger.h"
 #include "RotationTrigger.h"
+#include "VanishTrigger.h"
 #include "HorizontalScroll.h"
 #include "CanJump.h"
+#include "CollisionFlag.h"
+#include "FlaggedTrigger.h"
+#include "RecheckConditions.h"
+#include "ShrinkTrigger.h"
+#include "EndTrigger.h"
 
 
 class ECS abstract
@@ -54,6 +64,9 @@ public:
 	//Side stuff for entity identifier
 	static void SetIsMainCamera(unsigned entity, bool mainCamera);
 	static void SetIsMainPlayer(unsigned entity, bool mainPlayer);
+	//in progress - does nothing currently
+	static void SetEntityID(unsigned entity, std::vector<int> entities);
+
 
 private:
 	static entt::registry* m_reg;

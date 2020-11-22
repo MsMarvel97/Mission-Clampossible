@@ -32,6 +32,7 @@ void ECS::DestroyEntity(unsigned entity)
 	m_reg->destroy(entity);
 }
 
+
 void ECS::SetIsMainCamera(unsigned entity, bool mainCamera)
 {
 	if (mainCamera)
@@ -46,4 +47,9 @@ void ECS::SetIsMainPlayer(unsigned entity, bool mainPlayer)
 	{
 		MainEntities::MainPlayer(entity);
 	}
+}
+
+//in progress
+void ECS::SetEntityID(unsigned entity, std::vector<int> entities)
+{
 }

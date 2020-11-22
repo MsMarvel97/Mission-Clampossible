@@ -13,6 +13,7 @@ enum class BodyType
 	BOX,
 	CIRCLE,
 	TRIANGLE,
+	HEXAGON,
 
 	NUM_TYPES
 };
@@ -26,7 +27,9 @@ enum EntityCategories
 	FRIENDLY	= 0x0005,
 	ENEMY		= 0x0006,
 	PICKUP		= 0x0007,
-	TRIGGER		= 0x0008
+	TRIGGER		= 0x0008,
+	HEXAGON		= 0x0009,
+	SNAIL		= 0x0010
 };
 
 

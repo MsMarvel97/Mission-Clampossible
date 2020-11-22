@@ -30,6 +30,11 @@ int Trigger::GetTriggerEntity()
 	return m_triggerEntity;
 }
 
+void Trigger::ClearTargetEntities()
+{
+	m_targetEntities.clear();
+}
+
 
 
 void Trigger::AddTargetMoveX(float x)
@@ -80,6 +85,16 @@ void Trigger::AddTargetEntity(int entity)
 void Trigger::SetTargetEntities(std::vector<int> entities)
 {
 	m_targetEntities = entities;
+}
+
+void Trigger::SetTargetTrigger(int trigger)
+{
+		m_targetTrigger = trigger;
+}
+
+void Trigger::SetTrueTarget(int target)
+{
+	m_trueTarget = target;
 }
 
 std::vector<int> Trigger::GetTargetEntities()

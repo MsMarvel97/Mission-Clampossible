@@ -144,10 +144,13 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CameraSystem.h" />
     <ClInclude Include="CanJump.h" />
+    <ClInclude Include="CollisionFlag.h" />
     <ClInclude Include="DestroyTrigger.h" />
     <ClInclude Include="ECS.h" />
     <ClInclude Include="EffectManager.h" />
+    <ClInclude Include="EndTrigger.h" />
     <ClInclude Include="FirstCreation.h" />
+    <ClInclude Include="FlaggedTrigger.h" />
     <ClInclude Include="Framebuffer.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GrainEffect.h" />
@@ -164,6 +167,9 @@
     <ClInclude Include="JSON.h" />
     <ClInclude Include="MainEntities.h" />
     <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MoveTrigger.h" />
+    <ClInclude Include="MoveTriggerOneWay.h" />
+    <ClInclude Include="OtherEntities.h" />
     <ClInclude Include="PhysicsBody.h" />
     <ClInclude Include="PhysicsPlayground.h" />
     <ClInclude Include="PhysicsPlaygroundListener.h" />
@@ -171,6 +177,7 @@
     <ClInclude Include="PixelateEffect.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PostEffect.h" />
+    <ClInclude Include="RecheckConditions.h" />
     <ClInclude Include="RenderingSystem.h" />
     <ClInclude Include="ResizeTrigger.h" />
     <ClInclude Include="RotationTrigger.h" />
@@ -180,6 +187,7 @@
     <ClInclude Include="SelectiveColorEffect.h" />
     <ClInclude Include="SepiaEffect.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="ShrinkTrigger.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="TextureManager.h" />
@@ -189,6 +197,7 @@
     <ClInclude Include="Trigger.h" />
     <ClInclude Include="UI.h" />
     <ClInclude Include="Utilities.h" />
+    <ClInclude Include="VanishTrigger.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="VertexManager.h" />
     <ClInclude Include="VerticalScroll.h" />
@@ -205,10 +214,13 @@
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CameraSystem.cpp" />
     <ClCompile Include="CanJump.cpp" />
+    <ClCompile Include="CollisionFlag.cpp" />
     <ClCompile Include="DestroyTrigger.cpp" />
     <ClCompile Include="ECS.cpp" />
     <ClCompile Include="EffectManager.cpp" />
+    <ClCompile Include="EndTrigger.cpp" />
     <ClCompile Include="FirstCreation.cpp" />
+    <ClCompile Include="FlaggedTrigger.cpp" />
     <ClCompile Include="Framebuffer.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GrainEffect.cpp" />
@@ -224,6 +236,9 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainEntities.cpp" />
     <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MoveTrigger.cpp" />
+    <ClCompile Include="MoveTriggerOneWay.cpp" />
+    <ClCompile Include="OtherEntities.cpp" />
     <ClCompile Include="PhysicsBody.cpp" />
     <ClCompile Include="PhysicsPlayground.cpp" />
     <ClCompile Include="PhysicsPlaygroundListener.cpp" />
@@ -231,6 +246,7 @@
     <ClCompile Include="PixelateEffect.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PostEffect.cpp" />
+    <ClCompile Include="RecheckConditions.cpp" />
     <ClCompile Include="RenderingSystem.cpp" />
     <ClCompile Include="ResizeTrigger.cpp" />
     <ClCompile Include="RotationTrigger.cpp" />
@@ -239,6 +255,7 @@
     <ClCompile Include="SelectiveColorEffect.cpp" />
     <ClCompile Include="SepiaEffect.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="ShrinkTrigger.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="TextureManager.cpp" />
@@ -248,6 +265,7 @@
     <ClCompile Include="Trigger.cpp" />
     <ClCompile Include="UI.cpp" />
     <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="VanishTrigger.cpp" />
     <ClCompile Include="Vector.cpp" />
     <ClCompile Include="VertexManager.cpp" />
     <ClCompile Include="VerticalScroll.cpp" />
